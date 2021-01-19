@@ -10,13 +10,13 @@ Tragen Sie bitte zunächst Ihre Teamnummer in Zeile 9 ein. Diese wird Ihnen von 
 team='2' # Tragen Sie in dieser Zeile bitte Ihre Teamnummer ein.
 '''
 # Eine einfache Ausgabe auf dem Terminal
-# Mission 1 - Setzen Sie die Variable a auf den Wert 'Ich bin um Kurs Dev4All und lerne Python' Lassen Sie diesen auf der Konsole ausgeben.
+# Mission 1 - Setzen Sie die Variable a auf den Wert 'Ich bin im Kurs Dev4All und lerne Python' Lassen Sie diesen auf der Konsole ausgeben.
 # Arbeiten Sie hierzu mit einem 'print()' Statement
 '''
 
 def mission1():
     
-    a='Ich bin um Kurs Dev4All und lerne Python' #Diese Variable ist zu setzen
+    a='' #Diese Variable ist zu setzen
        
     Ergebnis=checkMission(a,team,1) # Diese Zeile bitte nicht verändern
     return Ergebnis
@@ -69,7 +69,7 @@ def mission4():
     # Denken Sie daran, die Variable a innerhalb des Statements passend zu setzen.
     if zahl == 0:
         print(zahl, "ist gleich 0")
-        # Hier gehört noch etwas hin
+        # Hier gehört noch etwas hin- es könnte so aussehen: a = größer
     Ergebnis=checkMission(a,team,4) # Diese Zeile bitte nicht verändern
     return Ergebnis # Diese Zeile bitte nicht verändern
 '''
@@ -121,4 +121,4 @@ print ('Mission 2 Status: '+ mission2())
 print ('Mission 3 Status: '+ mission3())
 print ('Mission 4 Status: '+ mission4())
 print ('Mission 5 Status: '+ mission5())
-print ('Mission 6 Status: '+ mission6())
+#print ('Mission 6 Status: '+ mission6())

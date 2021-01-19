@@ -1,8 +1,9 @@
-from dotenv import load_dotenv
-load_dotenv()
+#from dotenv import load_dotenv
+#load_dotenv()
 import requests
-import os
+#import os
 from requests_toolbelt.multipart.encoder import MultipartEncoder
+
 
 
 # Das Script arbeitet mit der Library "requests". Gegebenenfalls muss diese mit "pip install requests" nachinstalliert werden.
@@ -14,7 +15,7 @@ def checkMission(text,team,mission):
     mission=mission
     posttext='Team '+ str(team) +' schloss Mission '+ str(mission) +' ab. Das Ergebnis lautet: '+str(text)
 
-    if mission==1 and text=='Ich bin um Kurs Dev4All und lerne Python':
+    if mission==1 and text=='Ich bin im Kurs Dev4All und lerne Python':
         post(posttext)
         return 'Mission 1 erfolgreich'
     elif mission==2 and text=='100':
@@ -36,8 +37,10 @@ def checkMission(text,team,mission):
         return 'Noch nicht abgeschlossen'
 
 def post(text):
-    access_token = os.getenv("ACCESSTOKEN")
-    room_ID = os.getenv("ROOMID")
+    #access_token = os.getenv("ACCESSTOKEN")
+    access_token ='YjVkNTFjOWMtOThhOS00ODJiLWIwZTEtMDRlNWViZDkwNjU3MTJhNmZjZDctNTM4_PF84_b26cc13b-37f7-4057-ab70-3e0f679db605'
+    #room_ID = os.getenv("ROOMID")
+    room_ID = 'Y2lzY29zcGFyazovL3VzL1JPT00vZmI2NDY1YTAtNDM2OS0xMWViLWJkMjQtY2RiOWU4M2Y5ZTVj'
     apiUrl = "https://api.ciscospark.com/v1/messages"
     httpHeaders = {"Content-type" : "application/json", "Authorization" : "Bearer " + access_token}
     body = {"roomId" : room_ID, "text" : text}
@@ -46,8 +49,10 @@ def post(text):
 
 def postimage(image):
 
-    access_token = os.getenv("ACCESSTOKEN")
-    room_ID = os.getenv("ROOMID")
+    #access_token = os.getenv("ACCESSTOKEN")
+    access_token ='YjVkNTFjOWMtOThhOS00ODJiLWIwZTEtMDRlNWViZDkwNjU3MTJhNmZjZDctNTM4_PF84_b26cc13b-37f7-4057-ab70-3e0f679db605'
+    #room_ID = os.getenv("ROOMID")
+    room_ID = 'Y2lzY29zcGFyazovL3VzL1JPT00vZmI2NDY1YTAtNDM2OS0xMWViLWJkMjQtY2RiOWU4M2Y5ZTVj'
     
     payload={'roomId': room_ID,'text': 'Der aktuelle Missionsstand'}
     files=[('files',(image,open(image,'rb'),'image/png'))]
