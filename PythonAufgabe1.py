@@ -1,5 +1,7 @@
 import logging
 from post import checkMission # Diese Zeile bitte nicht verändern
+#logging.basicConfig(filename='example.log', encoding='utf-8', level=logging.INFO)
+logging.basicConfig(filename='example.log',level=logging.INFO)
 '''
 Ihre Aufgabe, sollten Sie sie akzeptieren lautet: Suchen sie in der nachfolgenden Textdatei nach dem Wort "Mission"
 und lösen Sie das Coderätsel. Die Missionen steigen im Schwierigkeitsgrad an. Das Ergebnis der Knobelaufgabe muss immer in der Variable a
@@ -7,7 +9,7 @@ gespeichert werden. Viel Erfolg! Bitte scheuen Sie sich nicht fragen zu stellen,
 Tragen Sie bitte zunächst Ihre Teamnummer in Zeile 9 ein. Diese wird Ihnen von Ihrem Instructor zugewiesen.
 
 '''
-team='2' # Tragen Sie in dieser Zeile bitte Ihre Teamnummer ein.
+team='1' # Tragen Sie in dieser Zeile bitte Ihre Teamnummer ein.
 '''
 # Eine einfache Ausgabe auf dem Terminal
 # Mission 1 - Setzen Sie die Variable a auf den Wert 'Ich bin im Kurs Dev4All und lerne Python' Lassen Sie diesen auf der Konsole ausgeben.
@@ -17,8 +19,12 @@ team='2' # Tragen Sie in dieser Zeile bitte Ihre Teamnummer ein.
 def mission1():
     
     a='' #Diese Variable ist zu setzen
-       
+    Ergebnis1=checkMission('Ich Bin ein Text',10,6)
+    print ('############################################')
+    print (Ergebnis1)
     Ergebnis=checkMission(a,team,1) # Diese Zeile bitte nicht verändern
+    logging.warning('Dies soll eine Warnung für Euch sein')
+    logging.info('I told you so')  # will not print anything
     return Ergebnis
 
 '''
@@ -93,6 +99,9 @@ Aufgabe: Gestalten Sie die untenstehende while Schleife so um, daß diese exakt 
 Der Wert von s soll dabei jedes mal verdoppelt werden.
 '''
 def mission5():
+    '''
+    Beschreibung
+    '''
     a=19 # Diesen Wert nicht verändern
     i=0
 
@@ -106,6 +115,9 @@ def mission5():
     return Ergebnis # Diese Zeile bitte nicht verändern
 
 def mission6():
+    '''
+    Ich brauche eine schöne Beschreibung, was diese Funktion macht...
+    '''
     Satz=['Diese','Aufgabe','zerstört','sich','in','10','Sekunden','selbst'] # Die eckigen Klammern initialisieren ein Array
 
     for Wort in Satz:
