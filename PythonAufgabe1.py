@@ -19,9 +19,7 @@ team='1' # Tragen Sie in dieser Zeile bitte Ihre Teamnummer ein.
 def mission1():
     
     a='' #Diese Variable ist zu setzen
-    Ergebnis1=checkMission('Ich Bin ein Text',10,6)
     print ('############################################')
-    print (Ergebnis1)
     Ergebnis=checkMission(a,team,1) # Diese Zeile bitte nicht verändern
     logging.warning('Dies soll eine Warnung für Euch sein')
     logging.info('I told you so')  # will not print anything
@@ -96,7 +94,7 @@ Mit jedem Schleifendurchlauf wird der Wert i um eins erhöht.
 Ist der Wert i=10 erreicht, wird die Schleife beendet.
 
 Aufgabe: Gestalten Sie die untenstehende while Schleife so um, daß diese exakt 20 mal durchlaufen wird.
-Der Wert von s soll dabei jedes mal verdoppelt werden.
+Der Wert von a soll dabei jedes mal verdoppelt werden.
 '''
 def mission5():
     '''
